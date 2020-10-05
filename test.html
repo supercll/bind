@@ -21,6 +21,8 @@
             }
 
             fn.ccall(obj);
+
+            document.body.onclick = fn.bind(obj);
         </script>
     </body>
 </html>
