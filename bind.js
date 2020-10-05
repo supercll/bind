@@ -12,7 +12,8 @@ Function.prototype.ccall = function (context, ...params) {
 };
 
 Function.prototype.cbind = function (context, ...params) {
+    let _this = this
     return function (...args) {
-        this.ccall(context, ...params.concat(args));
+        _this.ccall(context, ...params.concat(args));
     };
 };
