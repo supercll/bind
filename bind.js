@@ -6,5 +6,7 @@ Function.prototype.call = function (context, ...params) {
 
     const fn = Symbol("fn");
     context[fn] = this;
-
+    let res = context[fn](...params);
+    delete context[fn];
+    return res;
 };
