@@ -1,4 +1,4 @@
-Function.prototype.call = function (context, ...params) {
+Function.prototype.ccall = function (context, ...params) {
     context = context == null ? window : context;
     if (!(context instanceof Object)) {
         context = Object(context);

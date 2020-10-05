@@ -12,5 +12,15 @@
     </head>
     <body>
         <script src="./bind.js"></script>
+        <script>
+            const obj = {
+                a: 1,
+            };
+            function fn() {
+                console.log(this);
+            }
+
+            fn.ccall(obj);
+        </script>
     </body>
 </html>
