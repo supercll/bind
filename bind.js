@@ -10,3 +10,9 @@ Function.prototype.ccall = function (context, ...params) {
     delete context[fn];
     return res;
 };
+
+Function.prototype.cbind = function (context, ...params) {
+    return function (...args) {
+        this.ccall(context, ...params.concat(args));
+    };
+};
